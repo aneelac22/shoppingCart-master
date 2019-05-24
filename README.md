@@ -17,6 +17,11 @@ Items are priced as follows (showing discount when available):
     • Apples are 60 cents each
 
     • Oranges are 25 cents each
+Discounts are as follows(when available):
+
+    • Apples are Buy 1 Get 1 free
+    
+    • Oranges are Buy 2 Get 1 free
 
 # Redux Shopping cart Example
 

@@ -4,8 +4,14 @@ import Product from "./Product";
 
 const ProductItem = ({ product, discount, onAddToCartClicked }) => (
   <div style={{ marginBottom: 20 }}>
-    <Product title={product.title} price={product.price} discount={discount} />
+    <Product
+      className="mt-2"
+      title={product.title}
+      price={product.price}
+      discount={discount}
+    />
     <button
+      className="btn btn-primary my-2"
       onClick={onAddToCartClicked}
       disabled={product.inventory > 0 ? "" : "disabled"}
     >
@@ -18,14 +24,14 @@ ProductItem.propTypes = {
   product: PropTypes.shape({
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    inventory: PropTypes.number.isRequired
+    inventory: PropTypes.number.isRequired,
   }).isRequired,
   discount: PropTypes.shape({
     id: PropTypes.number,
     get: PropTypes.number,
-    pay: PropTypes.number
+    pay: PropTypes.number,
   }),
-  onAddToCartClicked: PropTypes.func.isRequired
+  onAddToCartClicked: PropTypes.func.isRequired,
 };
 
 export default ProductItem;

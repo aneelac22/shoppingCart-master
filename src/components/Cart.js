@@ -9,11 +9,11 @@ const Cart = ({
   discounts,
   discount,
   totalAfterDiscount,
-  onCheckoutClicked
+  onCheckoutClicked,
 }) => {
   const hasProducts = products.length > 0;
   const nodes = hasProducts ? (
-    products.map(product => (
+    products.map((product) => (
       <Product
         title={product.title}
         price={product.price}
@@ -27,7 +27,7 @@ const Cart = ({
 
   const hasDiscounts = discounts.length > 0;
   const discountNodes = hasDiscounts ? (
-    discounts.map(discount => (
+    discounts.map((discount) => (
       <Discount
         title={discount.title}
         value={discount.value}
@@ -39,7 +39,7 @@ const Cart = ({
   );
 
   return (
-    <div>
+    <div className="col-3">
       <h3>Your shopping cart</h3>
       <div>{nodes}</div>
       <p>
@@ -56,6 +56,7 @@ const Cart = ({
         <b>Total payable: {totalAfterDiscount}</b>
       </p>
       <button
+        className="btn btn-primary"
         onClick={onCheckoutClicked}
         disabled={hasProducts ? "" : "disabled"}
       >
@@ -71,7 +72,7 @@ Cart.propTypes = {
   discounts: PropTypes.array,
   discount: PropTypes.string,
   totalAfterDiscount: PropTypes.string,
-  onCheckoutClicked: PropTypes.func
+  onCheckoutClicked: PropTypes.func,
 };
 
 export default Cart;

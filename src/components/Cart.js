@@ -39,7 +39,7 @@ const Cart = ({
   );
 
   return (
-    <div>
+    <div className="col-3">
       <h3>Your shopping cart</h3>
       <div>{nodes}</div>
       <p>

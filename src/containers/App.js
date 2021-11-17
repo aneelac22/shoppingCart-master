@@ -2,19 +2,13 @@ import React from "react";
 import ProductsContainer from "./ProductsContainer";
 import CartHolder from "./CartHolder";
 
-const style = {
-  width: "75%"
-};
 const App = () => (
-  <div>
-    <h1>Fruit Shopping Cart</h1>
-    <table />
-    <th style={style}>
+  <div className="col-12">
+    <h1 className="text-center mt-3">Fruit Shopping Cart</h1>
+    <div className="d-flex mt-4">
       <ProductsContainer />
-    </th>
-    <th style={style}>
       <CartHolder />
-    </th>
+    </div>
   </div>
 );
 
